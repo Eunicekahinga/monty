@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -29,7 +30,7 @@ void push(stack_t **stack, unsigned int line_number, char *arg)
 
 	{
 		dprintf(STDERR_FILENO, "Error:malloc failed\n");
-		exit(EXIT_FAILURE):
+		exit(EXIT_FAILURE);
 	}
 	new_node->n = value;
 	new_node->prev = NULL;
